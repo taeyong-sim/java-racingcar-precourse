@@ -4,9 +4,9 @@ import racingcar.common.InfoMessage;
 import racingcar.domain.Cars;
 import racingcar.domain.Game;
 import racingcar.domain.Round;
-import racingcar.service.ResultService;
 import racingcar.service.GameService;
 import racingcar.service.InputService;
+import racingcar.service.ResultService;
 import racingcar.ui.Input;
 import racingcar.ui.Output;
 
@@ -33,6 +33,7 @@ public class RacingController {
     private void inputToStartGame() {
         cars = inputCarName();
         inputService = new InputService(cars);
+        duplicateCheck();
         game = inputRound();
         gameService = new GameService(game);
     }
@@ -48,12 +49,21 @@ public class RacingController {
         }
     }
 
+    private void duplicateCheck() {
+        try {
+            inputService.duplicateValidation();
+        } catch (IllegalArgumentException e) {
+            Output.printMessageWithLineSpacing(e.getMessage());
+            inputService.setCars(inputCarName());
+        }
+    }
+
     private Game inputRound() {
         Output.printMessageWithLineSpacing(InfoMessage.INPUT_MOVEMENT_LIMIT);
-        try{
+        try {
             input = new Input();
             return new Game(inputService.getCars(), new Round(input.getInput()));
-        }catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             Output.printMessageWithLineSpacing(e.getMessage());
             return inputRound();
         }

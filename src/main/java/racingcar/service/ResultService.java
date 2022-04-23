@@ -1,6 +1,10 @@
 package racingcar.service;
 
-import racingcar.domain.*;
+import racingcar.domain.Car;
+import racingcar.domain.Cars;
+import racingcar.domain.Game;
+import racingcar.domain.Position;
+import racingcar.domain.Winners;
 
 public class ResultService {
 

@@ -22,7 +22,8 @@ public class Input {
     public List<Car> splitCarNames(String input){
         List<Car> addCarsList = new ArrayList<>();
         for (String carName : input.split(Constant.COMMA) ) {
-            addCarsList.add(new Car(new Name(carName), new Position(0)));
+            Car car = new Car(new Name(carName), new Position(0));
+            addCarsList.add(car);
         }
         return addCarsList;
     }
