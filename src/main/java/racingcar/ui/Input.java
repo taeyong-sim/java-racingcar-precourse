@@ -1,0 +1,30 @@
+package racingcar.ui;
+
+import camp.nextstep.edu.missionutils.Console;
+import racingcar.common.Constant;
+import racingcar.domain.Car;
+import racingcar.domain.Name;
+import racingcar.domain.Position;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Input {
+    private String input;
+
+    public Input() {
+        this.input = Console.readLine();
+    }
+
+    public String getInput() {
+        return input;
+    }
+
+    public List<Car> splitCarNames(String input){
+        List<Car> addCarsList = new ArrayList<>();
+        for (String carName : input.split(Constant.COMMA) ) {
+            addCarsList.add(new Car(new Name(carName), new Position(0)));
+        }
+        return addCarsList;
+    }
+}
