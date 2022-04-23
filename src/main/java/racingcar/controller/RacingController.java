@@ -60,6 +60,7 @@ public class RacingController {
     }
 
     private void processGame() {
+        Output.printDoubleLineSpacing();
         Output.printMessageWithLineSpacing(InfoMessage.OUTPUT_RUN_RESULT);
         for (int i = 0; i < game.getRound().getRoundNum(); i++) {
             gameService.playGame(game);

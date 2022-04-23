@@ -18,6 +18,11 @@ public class Output {
         System.out.println();
     }
 
+    public static void printDoubleLineSpacing(){
+        System.out.println();
+        System.out.println();
+    }
+
     public static void printInterimResult(Cars cars){
         StringBuilder interimResult = new StringBuilder();
         for (int i = 0; i < cars.getCarList().size(); i++) {
