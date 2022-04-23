@@ -1,32 +1,23 @@
 package racingcar.service;
 
-import racingcar.common.InfoMessage;
-import racingcar.domain.Car;
-import racingcar.domain.Cars;
-import racingcar.domain.Position;
-import racingcar.domain.Winners;
-import racingcar.ui.Output;
+import racingcar.domain.*;
 
-public class CarService {
+public class ResultService {
 
     private Position maxPosition;
     private Winners winners;
 
-    public void playGame(Cars cars) {
-        cars.moveCars();
-        Output.printMessageWithLineSpacing(InfoMessage.OUTPUT_RUN_RESULT);
-        Output.printInterimResult(cars);
-    }
-
-    public void determineMaxPosition(Cars cars) {
+    public void determineMaxPosition(Game game) {
         winners = new Winners();
         maxPosition = new Position(0);
+        Cars cars = game.getCars();
         for (Car car : cars.getCarList()) {
             maxPosition.setCarPosition(Math.max(maxPosition.getCarPosition(), car.getPosition().getCarPosition()));
         }
     }
 
-    public void determineWinners(Cars cars) {
+    public void determineWinners(Game game) {
+        Cars cars = game.getCars();
         for (Car car : cars.getCarList()) {
             addEachWinner(car);
         }
