@@ -1,7 +1,5 @@
 package racingcar.common;
 
-import camp.nextstep.edu.missionutils.Console;
-
 public class InfoMessage {
 
     /* Input Message Area */
