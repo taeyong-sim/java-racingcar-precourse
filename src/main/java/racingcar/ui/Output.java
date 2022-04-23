@@ -1,6 +1,5 @@
 package racingcar.ui;
 
-import racingcar.common.Constant;
 import racingcar.common.InfoMessage;
 import racingcar.domain.Car;
 import racingcar.domain.Cars;

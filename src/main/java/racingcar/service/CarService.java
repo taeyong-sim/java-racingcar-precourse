@@ -18,7 +18,7 @@ public class CarService {
         Output.printInterimResult(cars);
     }
 
-    public void determineMaxPosition(Cars cars){
+    public void determineMaxPosition(Cars cars) {
         winners = new Winners();
         maxPosition = new Position(0);
         for (Car car : cars.getCarList()) {
@@ -26,21 +26,20 @@ public class CarService {
         }
     }
 
-    public void determineWinners(Cars cars){
+    public void determineWinners(Cars cars) {
         for (Car car : cars.getCarList()) {
             addEachWinner(car);
         }
     }
 
-    private void addEachWinner(Car car){
-        if(car.getPosition().getCarPosition() == maxPosition.getCarPosition()){
+    private void addEachWinner(Car car) {
+        if (car.getPosition().getCarPosition() == maxPosition.getCarPosition()) {
             winners.addWinnerList(car);
         }
     }
 
-    public Winners getWinners(){
+    public Winners getWinners() {
         return this.winners;
     }
-
 
 }

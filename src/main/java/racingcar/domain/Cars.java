@@ -2,9 +2,6 @@ package racingcar.domain;
 
 import racingcar.common.Constant;
 import racingcar.common.ErrorMessage;
-import racingcar.ui.Output;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Cars {
@@ -17,10 +14,6 @@ public class Cars {
 
     public List<Car> getCarList() {
         return carList;
-    }
-
-    public Cars from(List<Car> carList){
-        return new Cars(carList);
     }
 
     private void carListSizeValidation(List<Car> carList) {

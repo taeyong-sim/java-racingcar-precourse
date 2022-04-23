@@ -3,8 +3,6 @@ package racingcar.domain;
 import racingcar.common.Constant;
 import racingcar.common.ErrorMessage;
 
-import java.util.NoSuchElementException;
-
 public class Name {
     private String carName;
 

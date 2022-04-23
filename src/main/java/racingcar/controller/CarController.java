@@ -20,17 +20,17 @@ public class CarController {
     private static CarService carService;
 
     public static void run() {
-        init();
-        inputBeforeGame();
+        initCarService();
+        inputToStartGame();
         processGame();
         showResult();
     }
 
-    private static void init() {
+    private static void initCarService() {
         carService = new CarService();
     }
 
-    private static void inputBeforeGame() {
+    private static void inputToStartGame() {
         inputCarName();
         inputRound();
     }
@@ -38,13 +38,12 @@ public class CarController {
     private static void inputCarName() {
         Output.printMessage(InfoMessage.INPUT_CAR_NAME);
         input = new Input();
-        try{
+        try {
             carList = input.splitCarNames(input.getInput());
             cars = new Cars(carList);
-        }catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             Output.printMessageWithLineSpacing(e.getMessage());
         }
-
     }
 
     private static void inputRound() {
@@ -61,7 +60,7 @@ public class CarController {
         }
     }
 
-    private static void showResult(){
+    private static void showResult() {
         carService.determineMaxPosition(cars);
         carService.determineWinners(cars);
         Output.printWinners(carService.getWinners());

@@ -9,10 +9,6 @@ public class Game {
         this.round = round;
     }
 
-    public Cars getCars() {
-        return cars;
-    }
-
     public Round getRound() {
         return round;
     }

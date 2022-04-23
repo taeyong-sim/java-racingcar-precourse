@@ -5,7 +5,6 @@ import racingcar.common.Constant;
 import racingcar.domain.Car;
 import racingcar.domain.Name;
 import racingcar.domain.Position;
-
 import java.util.ArrayList;
 import java.util.List;
 

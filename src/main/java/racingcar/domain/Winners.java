@@ -1,9 +1,6 @@
 package racingcar.domain;
 
-import racingcar.common.Constant;
-import racingcar.common.ErrorMessage;
 import racingcar.common.InfoMessage;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,10 +9,6 @@ public class Winners {
 
     public Winners() {
         this.winnerList = new ArrayList<>();
-    }
-
-    public List<Car> getWinnerList() {
-        return winnerList;
     }
 
     public void addWinnerList(Car car) {

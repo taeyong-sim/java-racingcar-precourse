@@ -1,7 +1,6 @@
 package racingcar.domain;
 
 import racingcar.common.ErrorMessage;
-
 import java.util.regex.Pattern;
 
 public class Round {
@@ -14,10 +13,6 @@ public class Round {
 
     public int getRoundNum() {
         return roundNum;
-    }
-
-    public void setRoundNum(int roundNum) {
-        this.roundNum = roundNum;
     }
 
     private void roundValidation(String round){
