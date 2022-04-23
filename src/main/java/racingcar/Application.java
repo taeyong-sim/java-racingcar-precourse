@@ -4,6 +4,7 @@ import racingcar.controller.CarController;
 
 public class Application {
     public static void main(String[] args) {
-        CarController.run();
+        CarController carController = new CarController();
+        carController.run();
     }
 }

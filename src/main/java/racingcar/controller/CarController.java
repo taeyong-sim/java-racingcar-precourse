@@ -13,29 +13,29 @@ import java.util.List;
 
 public class CarController {
 
-    private static Input input;
-    private static Cars cars;
-    private static List<Car> carList;
-    private static Game game;
-    private static CarService carService;
+    private Input input;
+    private Cars cars;
+    private List<Car> carList;
+    private Game game;
+    private CarService carService;
 
-    public static void run() {
+    public void run() {
         initCarService();
         inputToStartGame();
         processGame();
         showResult();
     }
 
-    private static void initCarService() {
+    private void initCarService() {
         carService = new CarService();
     }
 
-    private static void inputToStartGame() {
+    private void inputToStartGame() {
         inputCarName();
         inputRound();
     }
 
-    private static void inputCarName() {
+    private void inputCarName() {
         Output.printMessage(InfoMessage.INPUT_CAR_NAME);
         input = new Input();
         try {
@@ -46,21 +46,21 @@ public class CarController {
         }
     }
 
-    private static void inputRound() {
+    private void inputRound() {
         Output.printMessageWithLineSpacing(InfoMessage.INPUT_MOVEMENT_LIMIT);
         input = new Input();
         Round round = new Round(input.getInput());
         game = new Game(cars, round);
     }
 
-    private static void processGame() {
+    private void processGame() {
         for (int i = 0; i < game.getRound().getRoundNum(); i++) {
             carService.playGame(cars);
             Output.printLineSpacing();
         }
     }
 
-    private static void showResult() {
+    private void showResult() {
         carService.determineMaxPosition(cars);
         carService.determineWinners(cars);
         Output.printWinners(carService.getWinners());
