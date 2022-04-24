@@ -16,9 +16,13 @@ public class Round {
     }
 
     private void roundValidation(String round){
-        String regex = "^[0-9]$";
-        if(!Pattern.matches(regex, round)) {
+        try{
+            Integer.parseInt(round);
+        }catch (NumberFormatException e){
             throw new IllegalArgumentException(ErrorMessage.ERROR_NUMBER_ONLY);
+        }
+        if(Integer.parseInt(round) <= 0){
+            throw new IllegalArgumentException(ErrorMessage.ERROR_ROUND_POSITIVE);
         }
     }
 }
