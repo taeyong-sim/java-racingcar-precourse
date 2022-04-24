@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Input {
-    private String input;
+    private final String input;
 
     public Input() {
         this.input = Console.readLine();

@@ -4,8 +4,8 @@ import racingcar.enums.Action;
 
 public class Car {
 
-    private Name name;
-    private Position position;
+    private final Name name;
+    private final Position position;
 
     public Car(Name name, Position position) {
         this.name = name;

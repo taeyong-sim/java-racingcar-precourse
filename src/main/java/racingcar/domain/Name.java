@@ -4,7 +4,7 @@ import racingcar.common.Constant;
 import racingcar.common.ErrorMessage;
 
 public class Name {
-    private String carName;
+    private final String carName;
 
     public Name(String carName) {
         nameValidation(carName);

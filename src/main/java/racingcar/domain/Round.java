@@ -4,7 +4,7 @@ import racingcar.common.ErrorMessage;
 import java.util.regex.Pattern;
 
 public class Round {
-    private int roundNum;
+    private final int roundNum;
 
     public Round(String round) {
         roundValidation(round);

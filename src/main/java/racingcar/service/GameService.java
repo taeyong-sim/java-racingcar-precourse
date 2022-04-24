@@ -5,7 +5,7 @@ import racingcar.domain.Game;
 import racingcar.ui.Output;
 
 public class GameService {
-    private Game game;
+    private final Game game;
 
     public GameService(Game game) {
         this.game = game;

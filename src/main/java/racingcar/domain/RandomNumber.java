@@ -5,7 +5,7 @@ import racingcar.common.Constant;
 
 public class RandomNumber {
 
-    private int randomNumber;
+    private final int randomNumber;
 
     public RandomNumber() {
         this.randomNumber = Randoms.pickNumberInRange(Constant.MIN_RANDOM_NUMBER, Constant.MAX_RANDOM_NUMBER);

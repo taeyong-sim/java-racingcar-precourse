@@ -1,8 +1,8 @@
 package racingcar.domain;
 
 public class Game {
-    private Cars cars;
-    private Round round;
+    private final Cars cars;
+    private final Round round;
 
     public Game(Cars cars, Round round) {
         this.cars = cars;
