@@ -1,5 +1,6 @@
 package racingcar.domain;
 
+import racingcar.common.Constant;
 import racingcar.common.ErrorMessage;
 import java.util.regex.Pattern;
 
@@ -21,7 +22,7 @@ public class Round {
         }catch (NumberFormatException e){
             throw new IllegalArgumentException(ErrorMessage.ERROR_NUMBER_ONLY);
         }
-        if(Integer.parseInt(round) <= 0){
+        if(Integer.parseInt(round) <= Constant.MIN_ROUND_NUMBER){
             throw new IllegalArgumentException(ErrorMessage.ERROR_ROUND_POSITIVE);
         }
     }
