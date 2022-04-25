@@ -35,11 +35,17 @@
 [x] [자바 코드 컨벤션](https://google.github.io/styleguide/javaguide.html#s3.4.1-one-top-level-class) 체크
 
 4. 테스트 목록
-[x] CarTest
-  [x] 앞으로 이동할 경우 Position 적용되었는지 확인
 [x] CarsTest
+  [x] 자동차이름 입력후 사이즈 검증
   [x] 자동차이름 2개미만 입력시 예외 확인
   [x] 자동차이름으로 5글자 이상 입력시 예외 확인
+[x] NameTest
+  [x] 자동차이름 입력하지 않았을 경우 예외
+  [x] 자동차이름 5글자 이상 입력시 예외 확인
+[x] PositionTest
+  [x] 포지션 검증
+  [x] 포지션 음수의 경우 예외
+  [x] 포지션 이동 테스트
 [x] RandomNumberTest
   [x] 랜덤숫자가 4 미만일 경우 자동차 이동에 대한 boolean 값이 false 임을 확인
   [x] 랜덤숫자가 4 이상일 경우 자동차 이동에 대한 boolean 값이 true 임을 확인
@@ -47,5 +53,7 @@
   [x] 실행횟수 정상적으로 입력할 경우 해당 횟수가 제대로 저장되었는지 확인
   [x] 실행횟수로 0이 입력되었을 경우 예외 확인
   [x] 실행횟수로 음수가 입력되었을 경우 예외 확인
-[x] WinnersTest
-  [x] 최종 우승자에 대한 문자열 검증
+[x] OutputTest
+  [x] 실행결과 출력 테스트
+  [x] 최종우승자 1명인 경우 출력 테스트
+  [x] 최종우승자 2명인 경우 출력 테스트
