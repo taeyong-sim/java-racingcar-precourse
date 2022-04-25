@@ -2,7 +2,6 @@ package racingcar.domain;
 
 import racingcar.common.Constant;
 import racingcar.common.ErrorMessage;
-import java.util.regex.Pattern;
 
 public class Round {
     private final int roundNum;

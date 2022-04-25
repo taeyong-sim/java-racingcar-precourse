@@ -9,10 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Input {
-    private final String input;
+    private String input;
 
     public Input() {
         this.input = Console.readLine();
+    }
+
+    public void setInput(String input) {
+        this.input = input;
     }
 
     public String getInput() {

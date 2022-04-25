@@ -17,7 +17,7 @@ public class Name {
 
     private void nameValidation(String carName) {
         if (isEmptyName(carName)) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException(ErrorMessage.ERROR_EMPTY_CARS_NAME);
         }
         if (isExceedNameLength(carName)) {
             throw new IllegalArgumentException(ErrorMessage.ERROR_MAX_CAR_NAME_LENGTH);
