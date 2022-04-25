@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import racingcar.common.ErrorMessage;
 
 class RoundTest {
-
     @Test
     void 실행횟수_0_입력시_예외(){
         Throwable throwable = assertThrows(IllegalArgumentException.class, () -> new Round("0"));
